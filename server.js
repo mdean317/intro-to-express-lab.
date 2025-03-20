@@ -28,11 +28,6 @@ const shoes = [
 // Rest of your Express app code
 // Define routes here (we'll add them soon)
 
-// Listen for requests on port 3000
-app.listen(3000, () => {
-    console.log('Listening on port 3000')
-  });
-
 // Define routes here:
 app.get('/greetings/:name', (req, res) => {
     res.send(`Hello there, ${req.params.name}`);
@@ -107,4 +102,9 @@ app.get('/shoes', (req, res) => {
     }
     res.send(shoesDisplay);
 });
+
+// Listen for requests on port 3000
+app.listen(3000, () => {
+    console.log('Listening on port 3000')
+  });
 
